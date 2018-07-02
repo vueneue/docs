@@ -53,8 +53,8 @@ module.exports = {
   pluginOptions: {
     ssr: {
       https: {
-        key: fs.readFileSync('path/to/key.pem'),
-        cert: fs.readFileSync('path/to/cert.pem'),
+        key: fs.readFileSync('path/to/key.pem', 'utf-8'),
+        cert: fs.readFileSync('path/to/cert.pem', 'utf-8'),
       },
     },
   },
@@ -63,7 +63,7 @@ module.exports = {
 
 ## Docker
 
-When you invoke this project you can add a Dockerfile in your project.
+When you invoke this plugin you can choose to add a Dockerfile in your app.
 You can use it to deploy your project with [Docker](https://www.docker.com/).
 It's ready for production !
 
