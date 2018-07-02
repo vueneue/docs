@@ -1,4 +1,4 @@
-# Server customization
+# Server
 
 Under the wood, this plugin use a [Koa](https://koajs.com/) server, you can customize its
 behavior in `vue.config.js` file.
@@ -7,7 +7,7 @@ behavior in `vue.config.js` file.
 
 You can add middlewares to Koa instance:
 
-`vue.config.js`
+In `vue.config.js`
 
 ```js
 const compress = require('koa-compress');
@@ -28,7 +28,7 @@ module.exports = {
 
 You can add Vue directives definition for SSR
 
-`vue.config.js`
+In `vue.config.js`
 
 ```js
 module.exports = {

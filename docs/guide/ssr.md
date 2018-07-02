@@ -1,4 +1,4 @@
-# Server side rendering
+# SSR features
 
 ## Async data on page
 
