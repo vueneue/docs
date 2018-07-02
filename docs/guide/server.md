@@ -79,20 +79,19 @@ docker run -d -p 3000:3000 --name vue-starter <image>
 ```Dockerfile
 FROM node:10 as builder
 
-ENV NODE_ENV development
+ENV NODE_ENV production
 
 RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
 
 COPY package.json /home/node/app
-RUN yarn
+RUN yarn --production=false
 
 COPY . /home/node/app
 
-ENV NODE_ENV production
-
 RUN yarn ssr:build && \
   yarn --production && \
+  yarn add core-js regenerator-runtime && \
   yarn cache clean
 
 #######################################################
@@ -110,4 +109,11 @@ USER node
 WORKDIR /home/node/app
 
 CMD ["node", "./start.js"]
+```
+
+**dockerignore content:**
+
+```
+node_modules/
+dist/
 ```
