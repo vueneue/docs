@@ -71,7 +71,7 @@ It's ready for production !
 
 ```bash
 docker build -t <image> .
-docker run -d -p 3000:3000 --name vue-starter <image>
+docker run -d -p 3000:3000 --name vueneue <image>
 ```
 
 **Dockerfile content:**

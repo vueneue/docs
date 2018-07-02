@@ -11,12 +11,14 @@ vue add @vueneue/ssr
 ```
 
 :::warning
-At the moment, this plugin will heavly overwrite some base files:
+At the moment, this plugin will rewrite completly some base files:
 
 - `src/App.vue`
 - `src/main.js`
 - `src/router.js`
 - `src/store.js`
+- `src/views/Home.vue`
+- `src/views/About.vue`
 
 So, before install this plugin, please commit your current changes
 :::
@@ -42,5 +44,11 @@ npm run ssr:start
 ```
 
 :::tip
-The `serve` and `build` are still available to run your application in SPA mode
+The `serve` and `build` commands are still available to run your application in SPA mode
 :::
+
+## Credits
+
+- [VueJS Team](https://vuejs.org)
+- [NuxtJS Team](https://nuxtjs.org/)
+- [Egoist](https://github.com/egoist)

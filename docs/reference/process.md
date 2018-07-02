@@ -1,7 +1,7 @@
 # Process variables
 
 Thanks to Webpack and his DefinePlugin, this starter inject some useful variables in your
-project ton handle some conditions based on build or environment context.
+project to handle some conditions based on build or environment context.
 
 List of defined variables :
 

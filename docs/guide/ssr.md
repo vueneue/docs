@@ -65,6 +65,16 @@ export async function initApp() {
 
 [See **Process variables** reference](/reference/process.html)
 
+## onHttpRequest store action
+
+As you can see in `/src/store.js` file you have an action called `onHttpRequest`.
+This action will be called before your application is ready. The second argument is
+`context` which contain same [context](/reference/) data as **Initialize function**
+
+This action is very similiar to [Nuxt `nuxtServerInit`](https://nuxtjs.org/guide/vuex-store/#the-nuxtserverinit-action)
+
+In SPA mode too this action is called before application is ready.
+
 ## Middlewares
 
 You can apply global or per-route middlewates. This functions are called before
