@@ -5,7 +5,7 @@ behavior in `vue.config.js` file.
 
 ## Middlewares
 
-You can middlewares to Koa instance:
+You can add middlewares to Koa instance:
 
 `vue.config.js`
 
@@ -26,7 +26,7 @@ module.exports = {
 
 ## SSR Directives
 
-You can Vue directives definition for SSR
+You can add Vue directives definition for SSR
 
 `vue.config.js`
 
@@ -43,6 +43,23 @@ module.exports = {
 ```
 
 [See official docs](https://ssr.vuejs.org/api/#directives)
+
+## Use HTTPS
+
+In `vue.config.js`
+
+```js
+module.exports = {
+  pluginOptions: {
+    ssr: {
+      https: {
+        key: fs.readFileSync('path/to/key.pem'),
+        cert: fs.readFileSync('path/to/cert.pem'),
+      },
+    },
+  },
+};
+```
 
 ## Docker
 
