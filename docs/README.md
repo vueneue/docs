@@ -8,7 +8,7 @@ features:
 - title: Vue CLI 3.x
   details: Use the latest Vue CLI to build your applications with its beautiful Vue UI
 - title: Plugins compatibility
-  details: This project aim to have a good compatibility with others Vue CLI plugins
+  details: This project aims to have a good compatibility with other Vue CLI plugins
 footer: MIT Licensed | Copyright © 2018 Simon Babay
 ---
 

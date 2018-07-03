@@ -10,6 +10,10 @@ I'll try to make this plugins compatible without any code change on your side
 
 ## PWA
 
+:::warning
+Some issues
+:::
+
 The PWA built-in plugin will normally include `registerServiceWorker.js` in `src/main` like this:
 
 ```js
@@ -25,6 +29,10 @@ if (process.client) {
 ```
 
 ## Apollo
+
+:::warning
+Hard workaround
+:::
 
 1.  Add vue-apollo client to transpile dependencies in `vue.config.js`
 
