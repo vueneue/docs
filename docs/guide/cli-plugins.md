@@ -10,10 +10,6 @@ I'll try to make this plugins compatible without any code change on your side
 
 ## PWA
 
-:::warning
-Some issues
-:::
-
 The PWA built-in plugin will normally include `registerServiceWorker.js` in `src/main` like this:
 
 ```js
@@ -26,6 +22,20 @@ But this is not compatible with SSR, so you need to include it only on client si
 if (process.client) {
   require('./registerServiceWorker');
 }
+```
+
+In your `vue.config.js` please add this:
+
+```js
+module.exports = {
+  pwa: {
+    workboxOptions: {
+      templatedUrls: {
+        '/': 'index.ssr.html',
+      },
+    },
+  },
+};
 ```
 
 ## Apollo
@@ -69,17 +79,12 @@ const defaultOptions = {
 
 ## TypeScript
 
-:::warning
-Not working ATM
-:::
-
-Add this config to your `tsconfig.json`:
+Add `noImplicitAny` to your `tsconfig.json`:
 
 ```json
 {
   "compilerOptions": {
-    "allowJs": true,
-    "noImplicitAny": true
+    "noImplicitAny": false
   }
 }
 ```
