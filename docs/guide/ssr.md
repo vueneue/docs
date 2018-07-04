@@ -150,3 +150,55 @@ Then you can change theses values in each pages component.
 ## No-SSR component
 
 [Official docs](https://github.com/egoist/vue-no-ssr)
+
+## Generate static files
+
+You can generate a static website with a simple command:
+
+```bash
+npm run generate
+```
+
+Default configuration will parse your application routes and generate a HTML file for each.
+
+You can configure pre-rendering behavior in `vue.config.js`:
+
+```js
+module.exports = {
+  pluginOptions: {
+    generate: {
+      paths: ['/path-a', '/path-b'],
+      scanRouter: true,
+      params: {},
+    },
+  },
+};
+```
+
+**Options**
+
+- `paths`: Useful if `scanRouter` is disabled or a route is not rendered. Fill this
+  variable with an array of route paths
+- `scanRouter`: Automatic fetch routes paths from you application router (`src/router.js`)
+- `params`: Define possibles values for your dynamic routes.
+  Example:
+  ```js
+  {
+    path: '/:lang/about',
+    component: AboutPage,
+  }
+  ```
+  In your config:
+  ```js
+  {
+    params: {
+      lang: [null, 'en', 'fr'],
+    },
+  }
+  ```
+  Will generate these pages :
+  ```
+  /about
+  /en/about
+  /fr/about
+  ```

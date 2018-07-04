@@ -30,6 +30,12 @@ npm run ssr:build
 npm run ssr:start
 ```
 
+**Generate a static website**
+
+```bash
+npm run generate
+```
+
 :::tip
 The `serve` and `build` commands are still available to run your application in SPA mode
 :::

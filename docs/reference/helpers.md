@@ -2,11 +2,11 @@
 
 ## $redirect()
 
-TODO
+`TODO`
 
 ## $error()
 
-TODO
+`TODO`
 
 ## Vue class components
 
