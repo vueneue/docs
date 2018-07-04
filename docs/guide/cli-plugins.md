@@ -5,7 +5,13 @@ Here are some tips to use some other Vue CLI plugins with VueNeue
 :::warning
 Work in progress !
 
-I'll try to make this plugins compatible without any code change on your side
+I'll try to make this plugins compatible without any code change on your side.
+
+I'm waiting for this issues to be implemented in Vue CLI:
+
+- [https://github.com/vuejs/vue-cli/issues/845](https://github.com/vuejs/vue-cli/issues/845)
+- [https://github.com/vuejs/vue-cli/issues/1754](https://github.com/vuejs/vue-cli/issues/1754)
+
 :::
 
 ## PWA
@@ -38,10 +44,59 @@ module.exports = {
 };
 ```
 
+:::tip
+You don't need to do this if you add @vueneue/ssr after @vue/pwa
+:::
+
+## TypeScript
+
+Add `noImplicitAny` to your `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "noImplicitAny": false
+  }
+}
+```
+
+## Vue i18n
+
+1.  In `src/i18n.js` created by i18n plugin, change default export by this:
+
+```js
+export default () => {
+  return new VueI18n({
+    locale: process.env.VUE_APP_I18N_LOCALE || 'en',
+    fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
+    messages: loadLocaleMessages(),
+  });
+};
+```
+
+2.  In `src/main.js`
+
+```js{1,7}
+import createI18n from './i18n';
+
+export function createApp({ router, store }) {
+  return new Vue({
+    router,
+    store,
+    i18n: createI18n(),
+    render: h => h(App)
+  });
+}
+```
+
+:::tip
+You don't need to do this if you add @vueneue/ssr after i18n plugin
+:::
+
 ## Apollo
 
 :::warning
-Hard workaround
+Hard workaround / Not tested
 :::
 
 1.  Add vue-apollo client to transpile dependencies in `vue.config.js`
@@ -76,49 +131,3 @@ const defaultOptions = {
 ```
 
 4.  Comment `localStorage` lines in `src/vue-apollo.js`
-
-## TypeScript
-
-Add `noImplicitAny` to your `tsconfig.json`:
-
-```json
-{
-  "compilerOptions": {
-    "noImplicitAny": false
-  }
-}
-```
-
-### Vue class components
-
-A small helper exists in `src/vueclass.ts` to use Vue class components:
-
-```js
-import { Vue, Component } from '@/vueclass';
-
-@Component({
-  head: {
-    title: 'Some page',
-  },
-})
-export class SomePage extends Vue {
-  async asyncData() {
-    return {
-      foo: 'bar',
-    };
-  }
-}
-```
-
-:::tip
-You can use decorators from:
-
-- vue-class-component
-- vue-property-decorator
-- vuex-class
-
-:::
-
-## Vue i18n
-
-TODO
