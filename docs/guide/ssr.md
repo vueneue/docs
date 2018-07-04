@@ -146,3 +146,7 @@ export default {
 ```
 
 Then you can change theses values in each pages component.
+
+## No-SSR component
+
+[Official docs](https://github.com/egoist/vue-no-ssr)
