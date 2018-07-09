@@ -166,8 +166,9 @@ You can configure pre-rendering behavior in `vue.config.js`:
 ```js
 module.exports = {
   pluginOptions: {
+    // Default values
     generate: {
-      paths: ['/path-a', '/path-b'],
+      paths: [],
       scanRouter: true,
       params: {},
     },
@@ -206,7 +207,7 @@ module.exports = {
 ## Base files/code structure
 
 Due to SSR behaviors you will see some changes on Vue app, router and store
-instanciation: plugin will use a factory function for them (https://ssr.vuejs.org/guide/structure.html#avoid-stateful-singletons)
+instanciation: plugin will use a factory function for them: [Avoid Stateful Singletons](https://ssr.vuejs.org/guide/structure.html#avoid-stateful-singletons)
 
 `src/main.js`
 
@@ -258,6 +259,7 @@ to work properly:
 - `src/main.js`
 - `src/router.js`
 - `src/store.js`
+- `src/middlewares.js`
 - `src/vueneue/index.html` (Needed to render page on server side)
 - `src/vueneue/ErrorPage.vue` (Needed to display errors pages)
 
