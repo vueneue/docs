@@ -16,6 +16,10 @@ I'm waiting for this issues to be implemented in Vue CLI:
 
 ## PWA
 
+:::tip
+You don't need to do this if you add or invoke @vueneue/ssr after @vue/pwa
+:::
+
 The PWA built-in plugin will normally include `registerServiceWorker.js` in `src/main` like this:
 
 ```js
@@ -44,23 +48,29 @@ module.exports = {
 };
 ```
 
-:::tip
-You don't need to do this if you add @vueneue/ssr after @vue/pwa
-:::
-
 ## TypeScript
 
-Add `noImplicitAny` to your `tsconfig.json`:
+:::tip
+You don't need to do this if you add or invoke @vueneue/ssr after @vue/typescript
+:::
 
-```json
-{
-  "compilerOptions": {
-    "noImplicitAny": false
-  }
+In `src/main.ts` you need to `any` to first argument passed to `createApp()` function:
+
+```js{1}
+export function createApp({ router, store }: any) {
+  return new Vue({
+    router,
+    store,
+    render: h => h(App)
+  });
 }
 ```
 
 ## Vue i18n
+
+:::tip
+You don't need to do this if you add or invoke @vueneue/ssr after i18n plugin
+:::
 
 1.  In `src/i18n.js` created by i18n plugin, change default export by this:
 
@@ -88,10 +98,6 @@ export function createApp({ router, store }) {
   });
 }
 ```
-
-:::tip
-You don't need to do this if you add @vueneue/ssr after i18n plugin
-:::
 
 ## Apollo
 

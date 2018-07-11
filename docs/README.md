@@ -25,10 +25,6 @@ This plugin is heavly inspired by [NuxtJS](https://nuxtjs.org/) you will find a 
   - i18n
   - Apollo (Planned)
 
-:::tip v0.2.6
-The API/Template of this plugin is now considered as "stable"
-:::
-
 :::warning
 Can contain a lot of bugs, and the documenation is incomplete
 :::
