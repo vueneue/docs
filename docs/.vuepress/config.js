@@ -4,7 +4,7 @@ module.exports = {
   description: 'Vue CLI and Server Side Rendering',
   themeConfig: {
     sidebar: {
-      '/guide/': ['', 'ssr', 'server', 'cli-plugins'],
+      '/guide/': ['', 'start', 'ssr', 'server', 'cli-plugins', 'how-to'],
       '/reference/': ['', 'process', 'helpers'],
     },
     nav: [
