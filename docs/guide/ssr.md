@@ -30,37 +30,44 @@ export default {
 You cannot use `this` in this method, because the component is not created yet
 :::
 
-## Initialize function
+## Plugins system
 
-In the `src/main.js` file you can see an exported function. This one
+In the `neue.config.js` youn can define a list of plugins to call:
+
+```js
+module.exports = {
+  plugins: {
+    // Plugin called on server & client side
+    pluginName: '@/path/to/plugin',
+    // Plugin called only on client side
+    pluginClient: {
+      src: '@/path/to/plugin-client',
+      ssr: false,
+    },
+  },
+};
+```
+
+Each plugin can export a default async function. The first argument will
+be the [context variable](/reference/). With this function you can register addional store
+properties, add routes or use library that only works on client side:
+
+file you can see an exported function. This one
 is called when your application is ready to start. All base plugins
 are available:
 
 ```js
-/**
- * Init callback
- */
-export async function initApp() {
-  // Your code...
-}
-```
+export default async ({ store, router }) => {
+  store.registerModule(/* ... */);
+  router.addRoutes([
+    /* ... */
+  ]);
 
-[See **Context** reference](/reference/)
-
-The main purpose of this function is to init some Vue plugins or JS libraries according
-to the build context (eg. don't start some lib that require `window` object in SSR mode)
-
-Example:
-
-```js
-/**
- * Init callback
- */
-export async function initApp() {
+  // Only executed on client side
   if (process.client) {
-    // Start you library with required window object
+    // Your code
   }
-}
+};
 ```
 
 [See **Process variables** reference](/reference/#process-variables)

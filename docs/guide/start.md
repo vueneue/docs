@@ -38,6 +38,8 @@ module.exports = {
 
 Paths are relative to your project folder and you can use your Webpack resolve alias too.
 
+These files needs to exports Vue, Router and Store instanciation [via a factory function.](#base-files-code-structure)
+
 If they don't exists, this plugin will create them. When you are ready,
 you can add/install VueNeue plugin:
 
@@ -100,6 +102,21 @@ export default () => {
 };
 ```
 
-## Plugins system
+Finally the `src/index.html` is used to render page on server side:
 
-TODO
+```html
+<!DOCTYPE html>
+<html data-vue-meta-server-rendered data-html-attrs>
+
+<head>
+  <ssr-head>
+</head>
+
+<body data-body-attrs>
+  <ssr-body>
+</body>
+
+</html>
+```
+
+All tags and attributes in this are required for this plugin work properly.

@@ -42,3 +42,31 @@ List of defined variables :
 :::tip
 For environment variables see the official [Vue CLI documentation](https://cli.vuejs.org/guide/mode-and-env.html)
 :::
+
+## Configuration
+
+Theses configuration are in `neue.config.js` in your root project folder.
+Here is defaults values :
+
+```js
+module.exports = {
+  ssr: {
+    server: null,
+    directives: {},
+    https: null,
+  },
+  generate: {
+    paths: [],
+    scanRouter: true,
+    params: {},
+  },
+  templatePath: 'src/index.html',
+  paths: {
+    main: '@/main',
+    store: '@/store',
+    router: '@/router',
+  },
+  plugins: {},
+  middlewares: {},
+};
+```
