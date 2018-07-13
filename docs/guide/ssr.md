@@ -63,13 +63,13 @@ export async function initApp() {
 }
 ```
 
-[See **Process variables** reference](/reference/process.html)
+[See **Process variables** reference](/reference/#process-variables)
 
 ## onHttpRequest store action
 
 As you can see in `/src/store.js` file you have an action called `onHttpRequest`.
-This action will be called before your application is ready. The second argument is
-`context` which contain same [context](/reference/) data as **Initialize function**
+This action will be called before your application is ready. The second argument is a
+[`context` variable](/reference/).
 
 This action is very similiar to [Nuxt `nuxtServerInit`](https://nuxtjs.org/guide/vuex-store/#the-nuxtserverinit-action)
 
@@ -82,14 +82,22 @@ You can apply global or per-route middlewates. This functions are called before
 
 **Apply a middleware on all routes**
 
-In `src/middlewares.js`:
+In `neue.config.js`:
 
 ```js
-export default [
-  async context => {
-    // Do your check
+module.exports = {
+  middlewares: {
+    middlewareName: '@/path/to/middleware',
   },
-];
+};
+```
+
+And put this in you middleware file:
+
+```js
+export default async context => {
+  // Do your check
+};
 ```
 
 `context`: See [Context](/reference/)
@@ -177,17 +185,15 @@ npm run generate
 
 Default configuration will parse your application routes and generate a HTML file for each.
 
-You can configure pre-rendering behavior in `vue.config.js`:
+You can configure pre-rendering behavior in `neue.config.js`:
 
 ```js
 module.exports = {
-  pluginOptions: {
-    // Default values
-    generate: {
-      paths: [],
-      scanRouter: true,
-      params: {},
-    },
+  // Default values
+  generate: {
+    paths: [],
+    scanRouter: true,
+    params: {},
   },
 };
 ```

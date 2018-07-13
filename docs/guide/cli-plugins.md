@@ -54,15 +54,28 @@ module.exports = {
 You don't need to do this if you add or invoke @vueneue/ssr after @vue/typescript
 :::
 
-In `src/main.ts` you need to `any` to first argument passed to `createApp()` function:
+In `src/main.ts` you need to `any` to first argument passed to exported default function:
 
 ```js{1}
-export function createApp({ router, store }: any) {
+export default ({ router, store }: any) => {
   return new Vue({
     router,
     store,
     render: h => h(App)
   });
+}
+```
+
+You need to add a path to your `tsconfig.json`, if you want to use
+[Vue class components helper](/reference/helpers.html#vue-class-components):
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "neuets": "node_modules/@vueneue/ssr-core/neuets"
+    }
+  }
 }
 ```
 
@@ -89,7 +102,7 @@ export default () => {
 ```js{1,7}
 import createI18n from './i18n';
 
-export function createApp({ router, store }) {
+export default ({ router, store }) => {
   return new Vue({
     router,
     store,

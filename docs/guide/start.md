@@ -23,18 +23,15 @@ automatically, so, after installation, you're good to go !
 If you have already started a project and you have moved some base files, you
 need to indicate where are placed your files that instanciate the Vue app, router, and the store.
 
-You can do it in the `vue.config.js` file:
+You can do it in the `neue.config.js` file:
 
 ```js
 module.exports = {
-  pluginOptions: {
-    paths: {
-      main: './src/main', // File where you do a new Vue
-      router: './src/router', // File where you do a new Router
-      store: './src/store', // File where you do a new Vuex.Store
-      middlewares: './src/middlewares', // File that export middlewares array
-      index: './src/vueneue/index.html', // HTML Template to render pages
-    },
+  templatePath: 'src/vueneue/index.html' // HTML Template to render pages (relative to your project path)
+  paths: {
+    main: './src/main', // File where you do a new Vue
+    router: './src/router', // File where you do a new Router
+    store: './src/store', // File where you do a new Vuex.Store
   },
 };
 ```
@@ -63,7 +60,7 @@ instanciation: plugin will use a factory function for them: [Avoid Stateful Sing
 `src/main.js`
 
 ```js
-export function createApp({ router, store }) {
+export default ({ router, store }) => {
   // router and store are create by plugin and
   // injected to this function
   return new Vue({
@@ -71,7 +68,7 @@ export function createApp({ router, store }) {
     store,
     render: h => h(App),
   });
-}
+};
 ```
 
 `src/router.js`
@@ -103,14 +100,6 @@ export default () => {
 };
 ```
 
-VueNeue plugin have 2 more files needed to work properly;
+## Plugins system
 
-`src/middlewares.js'
-
-This file export an array of [middlewares]() to apply on all routes.
-You can customize its path in `vue.config.js` with the property: `pluginOptions.paths.middlewares`
-
-`src/vueneue/index.html`
-
-Is the base HTML template to render your pages on server side.
-You can customize its path in `vue.config.js` with the property: `pluginOptions.paths.index`
+TODO

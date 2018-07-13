@@ -1,24 +1,22 @@
 # Server config
 
 Under the wood, this plugin use a [Koa](https://koajs.com/) server, you can customize its
-behavior in `vue.config.js` file.
+behavior in `neue.config.js` file.
 
 ## Middlewares
 
 You can add middlewares to Koa instance:
 
-In `vue.config.js`
+In `neue.config.js`
 
 ```js
 const compress = require('koa-compress');
 
 module.exports = {
-  pluginOptions: {
-    ssr: {
-      server(app) {
-        // `app` is the Koa instance here
-        app.use(compress()):
-      },
+  ssr: {
+    server(app) {
+      // `app` is the Koa instance here
+      app.use(compress()):
     },
   },
 };
@@ -28,15 +26,13 @@ module.exports = {
 
 You can add Vue directives definition for SSR
 
-In `vue.config.js`
+In `neue.config.js`
 
 ```js
 module.exports = {
-  pluginOptions: {
-    ssr: {
-      directives: {
-        // Your directives here
-      },
+  ssr: {
+    directives: {
+      // Your directives here
     },
   },
 };
@@ -46,16 +42,14 @@ module.exports = {
 
 ## Use HTTPS
 
-In `vue.config.js`
+In `neue.config.js`
 
 ```js
 module.exports = {
-  pluginOptions: {
-    ssr: {
-      https: {
-        key: fs.readFileSync('path/to/key.pem', 'utf-8'),
-        cert: fs.readFileSync('path/to/cert.pem', 'utf-8'),
-      },
+  ssr: {
+    https: {
+      key: fs.readFileSync('path/to/key.pem', 'utf-8'),
+      cert: fs.readFileSync('path/to/cert.pem', 'utf-8'),
     },
   },
 };

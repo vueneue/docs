@@ -5,7 +5,7 @@ module.exports = {
   themeConfig: {
     sidebar: {
       '/guide/': ['', 'start', 'ssr', 'server', 'cli-plugins', 'how-to'],
-      '/reference/': ['', 'process', 'helpers'],
+      '/reference/': ['', 'helpers'],
     },
     nav: [
       {
