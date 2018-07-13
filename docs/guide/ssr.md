@@ -151,6 +151,22 @@ Then you can change theses values in each pages component.
 
 [Official docs](https://github.com/egoist/vue-no-ssr)
 
+You can use it like this:
+
+```html
+<template>
+  <div>
+
+    <p>I will be rendered on server-side</p>
+
+    <no-ssr>
+      <p>I will not be rendered on server-side</p>
+    </no-ssr>
+
+  </div>
+</template>
+```
+
 ## Generate static files
 
 You can generate a static website with a simple command:
