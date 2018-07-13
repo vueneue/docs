@@ -1,6 +1,0 @@
-- Intro
-  - Files structure / not movable files
-- SSR Features
-  - No-SSR docs
-  - Add tip for other Vue plugins
-- Helpers docs

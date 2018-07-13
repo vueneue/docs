@@ -136,4 +136,4 @@ const defaultOptions = {
 // ...
 ```
 
-4.  Comment `localStorage` lines in `src/vue-apollo.js`
+4.  Comment/delete `localStorage` lines in `src/vue-apollo.js`

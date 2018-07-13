@@ -13,7 +13,7 @@
 A small helper exists in `src/vueclass.js` to use Vue class components:
 
 ```js
-import { Vue, Component } from '@/vueclass';
+import { Component, Prop, Vue } from '@/vueclass';
 
 @Component({
   head: {
@@ -21,6 +21,9 @@ import { Vue, Component } from '@/vueclass';
   },
 })
 export class SomePage extends Vue {
+  @Prop({ type: String })
+  message;
+
   async asyncData() {
     return {
       foo: 'bar',

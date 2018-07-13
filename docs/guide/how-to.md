@@ -1,5 +1,9 @@
 # How to
 
+:::warning
+Work in progress
+:::
+
 ## Add page transitions
 
 ### Using CSS
@@ -10,7 +14,7 @@ TODO
 
 TODO
 
-## Add progress when navigating
+## Add progress/loader on pages navigations
 
 TODO
 

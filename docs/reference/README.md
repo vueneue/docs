@@ -13,7 +13,7 @@ to [`onHttpRequest`](/guide/ssr.html#onhttprequest-store-action) store action, t
 | `query`       |       Object        | Alias of `route.query`                                                                           |
 | `redirect`    |      Function       | Simple function to redirect to a specific page. [Docs](/reference/helpers.html#redirect)         |
 | `error`       |      Function       | Simple function to display an error page: [Docs](/reference/helpers.html#error)                  |
-| `url`         |       String        | The URL of current page. **SSR only**                                                            |
+| `url`         |       String        | URL of current page. **SSR only**                                                                |
 | `ctx`         |     Koa context     | The current koa context. See [Koa website](https://koajs.com/#context). **SSR only**             |
 
 :::tip

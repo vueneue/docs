@@ -1,4 +1,4 @@
-# Server
+# Server config
 
 Under the wood, this plugin use a [Koa](https://koajs.com/) server, you can customize its
 behavior in `vue.config.js` file.
