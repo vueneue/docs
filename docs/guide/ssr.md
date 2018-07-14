@@ -89,50 +89,40 @@ You can apply global or per-route middlewates. This functions are called before
 
 **Apply a middleware on all routes**
 
-In `neue.config.js`:
+In your `src/main.js`, in the Vue instanciation, just add a `middlewares` property:
 
 ```js
-module.exports = {
-  middlewares: {
-    middlewareName: '@/path/to/middleware',
-  },
+export default () => {
+  return new Vue({
+    router,
+    store,
+    middlewares: [
+      async context => {
+        // You code here
+      },
+    ],
+    render: h => h(App),
+  });
 };
 ```
 
-And put this in you middleware file:
-
-```js
-export default async context => {
-  // Do your check
-};
-```
+This function can return a promise and accept one argument:
 
 `context`: See [Context](/reference/)
 
-**Apply a middleware on route**
+**Apply a middleware on route component**
 
-In `src/router.js`:
+Like for global middleware you can set the property `middlewares` on
+your pages components:
 
-```js{10-16}
-import Router from 'vue-router';
-
-export default () => {
-  return new Router({
-    mode: process.ssr ? 'history' : 'hash',
-    routes: [
-      {
-        path: '/my-route',
-        component: SomeComponent,
-        meta: {
-          middlewares: [
-            async context => {
-              // Do your check
-            },
-          ],
-        },
-      },
-    ],
-  });
+```js
+export default {
+  template: '<div/>',
+  middlewares: [
+    async context => {
+      // You code here
+    },
+  ],
 };
 ```
 
