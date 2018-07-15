@@ -19,12 +19,9 @@ This plugin is heavly inspired by [NuxtJS](https://nuxtjs.org/) you will find a 
 - Server-side rendering
 - Can generate a static website
 - Basic Vue UI integration
+- Plugins & middlewares systems
 - CLI plugins support:
   - Progressive Web App
   - TypeScript
   - i18n
   - Apollo (Planned)
-
-:::warning
-Can contain a lot of bugs, and the documenation is incomplete
-:::
