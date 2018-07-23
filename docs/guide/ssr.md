@@ -222,3 +222,18 @@ module.exports = {
   /en/about
   /fr/about
   ```
+
+## SPA on routes
+
+In some cases you don't need or want SSR for some pages of your application (e.g. administration
+dashboard, logged pages...)
+
+It's possible to disable it with a simple configuration, in `neue.config.js`:
+
+```js
+module.exports = {
+  spaPaths: ['/admin', '/admin/**/*'],
+};
+```
+
+As you can see glob paths are supported.
