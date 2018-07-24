@@ -116,6 +116,8 @@ export default ({ router, store }) => {
 
 :::warning
 Hard workaround / Not tested
+
+[See issue #8](https://github.com/vueneue/vueneue/issues/8)
 :::
 
 1.  Add vue-apollo client to transpile dependencies in `vue.config.js`

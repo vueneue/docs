@@ -2,16 +2,14 @@
 
 ## Redirect function
 
-### `$redirect(location, statusCode = 301)`
+### `redirect(location, statusCode = 301)`
 
 A simple function to redirect to a specific page that works on client and server side:
 
 ```js
 export default {
-  methods: {
-    triggerRedirect() {
-      this.$redirect({ to: '' }, 302);
-    },
+  async asyncData({ redirect }) {
+    redirect({ to: '' }, 302);
   },
 };
 ```
@@ -20,10 +18,22 @@ export default {
 
 - The first argument can be a `location` like in [`router.go()` method](https://router.vuejs.org/guide/essentials/navigation.html#router-push-location-oncomplete-onabort)
 - The second argument is the HTTP status code (301 by default)
-  :::
+
+:::
 
 :::tip
-It's a shortcut to `this.$context.redirect()` inside your components.
+
+Main `app` object will emit a `router.redirect` event when you call this function.
+
+```js
+// In a plugin source code
+export default async ({ app }) {
+  app.$on('router.redirect', () => {
+    // Do an action on redirect
+  });
+}
+```
+
 :::
 
 ## Error function

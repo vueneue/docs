@@ -236,4 +236,4 @@ module.exports = {
 };
 ```
 
-As you can see glob paths are supported.
+As you can see glob patterns are supported.
