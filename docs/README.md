@@ -17,11 +17,21 @@ This plugin is heavly inspired by [NuxtJS](https://nuxtjs.org/) you will find a 
 **Features**
 
 - Server-side rendering
-- Can generate a static website
+- Generate a static website
 - Basic Vue UI integration
 - Plugins & middlewares systems
+- SSR can have routes in SPA mode
 - CLI plugins support:
   - Progressive Web App
   - TypeScript
   - i18n
-  - Apollo (Planned)
+
+[See example repository](https://github.com/vueneue/examples)
+
+**Planned**
+
+- Apollo CLI plugin support
+- Auto-routing
+- Critical CSS
+
+[See roadmap](https://github.com/vueneue/vueneue/projects/1)
