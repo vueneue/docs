@@ -9,7 +9,7 @@ This function contains the initial [context](/reference/) used to create the Vue
 Example:
 
 ```js
-export default function ({ app, router, store }) {
+export default function ({ router, store }) {
   return new Vue({
     router,
     store,
