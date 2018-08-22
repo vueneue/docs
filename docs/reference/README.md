@@ -3,7 +3,8 @@
 ## Context
 
 This object is sent to [`asyncData()`](/guide/ssr.html#async-data-on-page) function in your pages components,
-to [`onHttpRequest`](/guide/ssr.html#onhttprequest-store-action) store action, to [`initApp()`](/guide/ssr.html#initialize-function) callback and to your defined [middlewares](/guide/ssr.html#middlewares).
+to [`onHttpRequest`](/guide/ssr.html#onhttprequest-store-action) store action, to the exported [`src/main.js` initialization function](/guide/ssr.html#initialize-function) 
+and to your defined [middlewares](/guide/ssr.html#middlewares).
 
 | Variable name |        Type         | Description                                                                                       |
 | ------------- | :-----------------: | ------------------------------------------------------------------------------------------------- |
