@@ -65,7 +65,7 @@ It's ready for production !
 
 ```bash
 docker build -t <image> .
-docker run -d -p 3000:3000 --name vueneue <image>
+docker run -d -p 8080:8080 --name vueneue <image>
 ```
 
 **Dockerfile content:**
