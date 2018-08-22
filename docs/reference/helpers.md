@@ -2,7 +2,7 @@
 
 ## Redirect function
 
-### `redirect(location, statusCode = 301)`
+### `$redirect(location, statusCode = 301)`
 
 A simple function to redirect to a specific page that works on client and server side:
 
@@ -10,6 +10,12 @@ A simple function to redirect to a specific page that works on client and server
 export default {
   async asyncData({ redirect }) {
     redirect({ to: '' }, 302);
+  },
+
+  methods: {
+    onClick() {
+      this.$redirect({ to: '/some-path' });
+    },
   },
 };
 ```
