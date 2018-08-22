@@ -1,5 +1,26 @@
 # SSR features
 
+## Initialize function
+
+An exported function inside `src/main.js`.
+
+This function contains the initial [context](/reference/) used to create the Vue instance.
+
+Example:
+
+```js
+export default function ({ router, store }) {
+  return new Vue({
+    router,
+    store,
+    render: h => h(App)
+  })
+}
+```
+:::tip
+Keep this function body clean and use [plugins](#plugins-system) to handle boot time logic
+:::
+
 ## Async data on page
 
 You can setup an `asyncData()` method on your pages components. This method will be called
