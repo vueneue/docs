@@ -50,6 +50,10 @@ A simple function to display an error page:
 
 ```js
 export default {
+  async asyncData({ error }) {
+    error(new Error(`I'm a teapot`), 418);
+  },
+
   methods: {
     triggerError() {
       this.$error(new Error(`I'm a teapot`), 418);

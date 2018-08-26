@@ -9,14 +9,15 @@ This function contains the initial [context](/reference/) used to create the Vue
 Example:
 
 ```js
-export default function ({ router, store }) {
+export default function({ router, store }) {
   return new Vue({
     router,
     store,
-    render: h => h(App)
-  })
+    render: h => h(App),
+  });
 }
 ```
+
 :::tip
 Keep this function body clean and use [plugins](#plugins-system) to handle boot time logic
 :::
@@ -258,3 +259,27 @@ module.exports = {
 ```
 
 As you can see glob patterns are supported.
+
+## CSS management
+
+By default VueNeue will inline all your CSS in the final HTML output. If you want minification,
+you can use the PostCSS plugin [cssnano](https://cssnano.co/) like described [here](https://github.com/vueneue/vueneue/issues/15#issuecomment-415713897).
+
+You can choose to not inline CSS imported in main chunk and add it to a dedicated file.
+To do this, just change `css.extract` value in `neue.config.js`:
+
+```js
+module.exports = {
+  css: {
+    extract: true,
+  },
+};
+```
+
+Like described in [Vue SSR docs](https://ssr.vuejs.org/guide/css.html) CSS from async components
+will continue to be inlined in output HTML.
+
+More to come, work in progress:
+
+- [CSS management](https://github.com/vueneue/vueneue/issues/29#issuecomment-415965876)
+- [Critical CSS](https://github.com/vueneue/vueneue/issues/30)

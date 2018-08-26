@@ -70,6 +70,9 @@ module.exports = {
     store: '@/store',
     router: '@/router',
   },
+  css: {
+    extract: false,
+  },
   plugins: {},
 };
 ```
