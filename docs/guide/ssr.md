@@ -74,10 +74,6 @@ Each plugin can export a default async function. The first argument will
 be the [context variable](/reference/). With this function you can register addional store
 properties, add routes or use library that only works on client side:
 
-file you can see an exported function. This one
-is called when your application is ready to start. All base plugins
-are available:
-
 ```js
 export default async ({ store, router }) => {
   store.registerModule(/* ... */);
@@ -92,6 +88,24 @@ export default async ({ store, router }) => {
 };
 ```
 
+:::warning
+
+**v0.3.20+**
+
+Now `app` variable is not available in this function because `app` is not created.
+To access to `app` you need to use `appCreated()` function that accepts a callback:
+
+```js
+export default async ({ appCreated }) => {
+  appCreated(app => {
+    // App is now created
+  });
+});
+```
+
+:::
+
+[See **Context** reference](/reference/)
 [See **Process variables** reference](/reference/#process-variables)
 
 ## onHttpRequest store action
