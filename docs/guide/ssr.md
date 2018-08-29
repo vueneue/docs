@@ -92,7 +92,7 @@ export default async ({ store, router }) => {
 
 **v0.3.20+**
 
-Now `app` variable is not available in this function because `app` is not created.
+Now `app` variable is not available in this function because `app` is not created yet.
 To access to `app` you need to use `appCreated()` function that accepts a callback:
 
 ```js
