@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue CLI plugins | VueNeue</title>
+    <meta name="description" content="Vue CLI and Server Side Rendering">
+    
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.2400b03f.css" as="style"><link rel="preload" href="/docs/assets/js/app.5e256798.js" as="script"><link rel="preload" href="/docs/assets/js/5.73450432.js" as="script"><link rel="prefetch" href="/docs/assets/js/2.61c5963e.js"><link rel="prefetch" href="/docs/assets/js/3.940fcb48.js"><link rel="prefetch" href="/docs/assets/js/4.d7907a7b.js"><link rel="prefetch" href="/docs/assets/js/6.278665a7.js"><link rel="prefetch" href="/docs/assets/js/7.d6fef7ba.js"><link rel="prefetch" href="/docs/assets/js/8.4b5c94d8.js"><link rel="prefetch" href="/docs/assets/js/9.309111ef.js"><link rel="prefetch" href="/docs/assets/js/10.7ca48941.js"><link rel="prefetch" href="/docs/assets/js/11.0de76bf8.js"><link rel="prefetch" href="/docs/assets/js/12.6094fb47.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.2400b03f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/docs/" class="home-link router-link-active"><!----><span class="site-name">
+      VueNeue
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/guide/" class="nav-link router-link-active">Guide</a></div><div class="nav-item"><a href="/docs/reference/" class="nav-link">Reference</a></div><div class="nav-item"><a href="https://github.com/vueneue/vueneue" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/guide/" class="nav-link router-link-active">Guide</a></div><div class="nav-item"><a href="/docs/reference/" class="nav-link">Reference</a></div><div class="nav-item"><a href="https://github.com/vueneue/vueneue" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><!----></nav><ul class="sidebar-links"><li><a href="/docs/guide/" class="sidebar-link">Introduction</a></li><li><a href="/docs/guide/start.html" class="sidebar-link">Start</a></li><li><a href="/docs/guide/ssr.html" class="sidebar-link">SSR features</a></li><li><a href="/docs/guide/server.html" class="sidebar-link">Server config</a></li><li><a href="/docs/guide/cli-plugins.html" class="active sidebar-link">Vue CLI plugins</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/guide/cli-plugins.html#pwa" class="sidebar-link">PWA</a></li><li class="sidebar-sub-header"><a href="/docs/guide/cli-plugins.html#typescript" class="sidebar-link">TypeScript</a></li><li class="sidebar-sub-header"><a href="/docs/guide/cli-plugins.html#vue-i18n" class="sidebar-link">Vue i18n</a></li><li class="sidebar-sub-header"><a href="/docs/guide/cli-plugins.html#apollo" class="sidebar-link">Apollo</a></li></ul></li><li><a href="/docs/guide/how-to.html" class="sidebar-link">How to</a></li><li><a href="/docs/guide/migrate.html" class="sidebar-link">Migrations</a></li></ul></div><div class="page"><div class="content"><h1 id="vue-cli-plugins"><a href="#vue-cli-plugins" aria-hidden="true" class="header-anchor">#</a> Vue CLI plugins</h1><p>Here are some tips to use some other Vue CLI plugins with VueNeue</p><div class="warning custom-block"><p class="custom-block-title">WARNING</p><p>Work in progress !</p><p>I'll try to make this plugins compatible without any code change on your side.</p><p>I'm waiting for this issues to be implemented in Vue CLI:</p><ul><li><a href="https://github.com/vuejs/vue-cli/issues/845" target="_blank" rel="noopener noreferrer">https://github.com/vuejs/vue-cli/issues/845<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="https://github.com/vuejs/vue-cli/issues/1754" target="_blank" rel="noopener noreferrer">https://github.com/vuejs/vue-cli/issues/1754<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div><h2 id="pwa"><a href="#pwa" aria-hidden="true" class="header-anchor">#</a> PWA</h2><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>You don't need to do this if you add or invoke @vueneue/ssr after @vue/pwa</p></div><p>The PWA built-in plugin will normally include <code>registerServiceWorker.js</code> in <code>src/main</code> like this:</p><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token string">'./registerServiceWorker'</span><span class="token punctuation">;</span>
+</code></pre></div><p>But this is not compatible with SSR, so you need to include it only on client side :</p><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>client<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./registerServiceWorker'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>In your <code>vue.config.js</code> please add this:</p><div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  pwa<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    workboxOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      templatedUrls<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token string">'index.ssr.html'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="typescript"><a href="#typescript" aria-hidden="true" class="header-anchor">#</a> TypeScript</h2><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>You don't need to do this if you add or invoke @vueneue/ssr after @vue/typescript</p></div><p>In <code>src/main.ts</code> you need to <code>any</code> to first argument passed to exported default function:</p><div class="language-js extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br><br><br><br><br></div><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> router<span class="token punctuation">,</span> store <span class="token punctuation">}</span><span class="token punctuation">:</span> any<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    router<span class="token punctuation">,</span>
+    store<span class="token punctuation">,</span>
+    render<span class="token punctuation">:</span> h <span class="token operator">=&gt;</span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>You need to add a path to your <code>tsconfig.json</code>, if you want to use
+<a href="/docs/reference/helpers.html#vue-class-components">Vue class components helper</a>:</p><div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;paths&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;neuets&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node_modules/@vueneue/ssr-core/neuets&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="vue-i18n"><a href="#vue-i18n" aria-hidden="true" class="header-anchor">#</a> Vue i18n</h2><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>You don't need to do this if you add or invoke @vueneue/ssr after i18n plugin</p></div><ol><li>In <code>src/i18n.js</code> created by i18n plugin, change default export by this:</li></ol><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">VueI18n</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    locale<span class="token punctuation">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VUE_APP_I18N_LOCALE</span> <span class="token operator">||</span> <span class="token string">'en'</span><span class="token punctuation">,</span>
+    fallbackLocale<span class="token punctuation">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VUE_APP_I18N_FALLBACK_LOCALE</span> <span class="token operator">||</span> <span class="token string">'en'</span><span class="token punctuation">,</span>
+    messages<span class="token punctuation">:</span> <span class="token function">loadLocaleMessages</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="2"><li>In <code>src/main.js</code></li></ol><div class="language-js extra-class"><div class="highlight-lines"><div class="highlighted"> </div><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br></div><pre class="language-js"><code><span class="token keyword">import</span> createI18n <span class="token keyword">from</span> <span class="token string">'./i18n'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> router<span class="token punctuation">,</span> store <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    router<span class="token punctuation">,</span>
+    store<span class="token punctuation">,</span>
+    i18n<span class="token punctuation">:</span> <span class="token function">createI18n</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    render<span class="token punctuation">:</span> h <span class="token operator">=&gt;</span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="apollo"><a href="#apollo" aria-hidden="true" class="header-anchor">#</a> Apollo</h2><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>You don't need to do this if you add or invoke @vueneue/ssr after apollo</p></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p><p>But if you invoke apollo after @vueneue/ssr you need to modify a lots of things.</p></div><ol><li>Include <code>@/plugin/apollo</code> to <code>neue.config.js</code></li></ol><div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    apollo<span class="token punctuation">:</span> <span class="token string">'@/plugins/apollo'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="2"><li>Change code in <code>src/vue-apollo.js</code> like this:</li></ol><div class="language-js extra-class"><div class="highlight-lines"><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><div class="highlighted"> </div><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br></div><pre class="language-js"><code><span class="token comment">// Add this import:</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getAuth <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./plugins/apollo'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ...</span>
+
+<span class="token comment">// Remove this line</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueApollo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Add this condition</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'$filesRoot'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> <span class="token string">'$filesRoot'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token keyword">get</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> filesRoot<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> defaultOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Change this value:</span>
+  ssr<span class="token punctuation">:</span> <span class="token operator">!</span><span class="token operator">!</span>process<span class="token punctuation">.</span>server<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">createProvider</span><span class="token punctuation">(</span>options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Add this line:</span>
+  defaultOptions<span class="token punctuation">.</span>getAuth <span class="token operator">=</span> <span class="token function">getAuth</span><span class="token punctuation">(</span><span class="token constant">AUTH_TOKEN</span><span class="token punctuation">,</span> options<span class="token punctuation">.</span>ctx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// ...</span>
+
+  <span class="token keyword">return</span> apolloProvider<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">onLogin</span><span class="token punctuation">(</span>apolloClient<span class="token punctuation">,</span> token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Replace localStorage line by this:</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>client<span class="token punctuation">)</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'js-cookie'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token constant">AUTH_TOKEN</span><span class="token punctuation">,</span> token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">onLogout</span><span class="token punctuation">(</span>apolloClient<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Replace localStorage line by this:</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>client<span class="token punctuation">)</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'js-cookie'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token constant">AUTH_TOKEN</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>If you want authentication works properly on server side just add this following code to <code>neue.config.js</code></p><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> cookies <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'koa-cookie'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  ssr<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">server</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">cookies</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/docs/guide/server.html" class="prev">
+          Server config
+        </a></span><span class="next"><a href="/docs/guide/how-to.html">
+          How to
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/docs/assets/js/5.73450432.js" defer></script><script src="/docs/assets/js/app.5e256798.js" defer></script>
+  </body>
+</html>
